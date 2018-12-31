@@ -24,24 +24,16 @@
     };
 
     var mobileMenuOutsideClick = function () {
-
         $(document).click(function (e) {
             var container = $("#colorlib-offcanvas, .js-colorlib-nav-toggle");
             if (!container.is(e.target) && container.has(e.target).length === 0) {
-
                 if ($('body').hasClass('offcanvas')) {
-
                     $('body').removeClass('offcanvas');
                     $('.js-colorlib-nav-toggle').removeClass('active');
-
                 }
-
-
             }
         });
-
     };
-
 
     var offcanvasMenu = function () {
 
@@ -200,7 +192,7 @@
 
         $('#colorlib-hero .flexslider').flexslider({
             animation: "fade",
-            slideshowSpeed: 5000,
+            slideshowSpeed: 7500,
             directionNav: true,
             start: function () {
                 setTimeout(function () {
@@ -227,7 +219,7 @@
             loop: true,
             margin: 0,
             responsiveClass: true,
-            nav: true,
+            nav: false,
             dots: true,
             smartSpeed: 500,
             navText: [
@@ -259,15 +251,13 @@
             ]
         })
     };
-
+    /*
     var datePicker = function () {
-        // jQuery('#time').timepicker();
-        jQuery('.date').datepicker({
-            'format': 'm/d/yyyy',
-            'autoclose': true
-        });
-    };
-
+    jQuery('.date').datepicker({
+    'format': 'm/d/yyyy',
+    'autoclose': true
+    });
+    };*/
 
     $(function () {
         mobileMenuOutsideClick();
@@ -279,8 +269,5 @@
         goToTop();
         loaderPage();
         owlCrouselFeatureSlide();
-        datePicker();
     });
-
-
 }());
